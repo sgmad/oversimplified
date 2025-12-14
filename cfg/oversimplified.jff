@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<structure>
+	<type>grammar</type>
+	<!-- 
+      NORMAL (SPACED) GRAMMAR
+      
+      This grammar explicitly includes spaces in the rules.
+      You must type inputs exactly as shown in the examples.
+      
+      VARIABLES:
+      M = Main Program
+      K = Kommand (Statement)
+      Z = Expression
+    -->
+
+    <!-- PROGRAM STRUCTURE -->
+    <!-- Allows separating statements with a space -->
+	<production>
+		<left>M</left>
+		<right>K M</right>
+	</production>
+	<!-- Alternative: Multiple statements separated by a space character -->
+	<!-- JFLAP Note: We simulate this by just allowing K followed by M. 
+         Because the commands end/start with specific letters, 
+         we will add explicit spaces inside the commands instead. -->
+	<production>
+		<left>M</left>
+		<right>K</right>
+	</production>
+	
+	<!-- 1. ASSIGNMENT: "set v = n" -->
+	<!-- Note the spaces around the = sign -->
+	<production>
+		<left>K</left>
+		<right>set v = Z</right>
+	</production>
+	
+	<!-- 2. OUTPUT: "say n" -->
+	<!-- Note the space after say -->
+	<production>
+		<left>K</left>
+		<right>say Z</right>
+	</production>
+	
+	<!-- 3. EXECUTE: "run v" -->
+	<production>
+		<left>K</left>
+		<right>run v</right>
+	</production>
+	
+	<!-- 4. CONDITION: "test v { ... } fail { ... }" -->
+	<!-- Spaces added for readability -->
+	<production>
+		<left>K</left>
+		<right>test Z { M } fail { M }</right>
+	</production>
+
+    <!-- 5. MATH: "plus n n" -->
+    <production>
+		<left>K</left>
+		<right>plus Z Z</right>
+	</production>
+
+	<!-- EXPRESSIONS -->
+	<production>
+		<left>Z</left>
+		<right>v</right>
+	</production>
+	<production>
+		<left>Z</left>
+		<right>n</right>
+	</production>
+	<!-- Nested Math: "plus a b" -->
+	<!-- Note the space after plus -->
+	<production>
+		<left>Z</left>
+		<right>plus Z Z</right>
+	</production>
+
+</structure>

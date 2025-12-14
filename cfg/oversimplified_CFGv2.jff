@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<structure>
+	<type>grammar</type>
+	<production>
+		<left>S</left>
+		<right>C S</right>
+	</production>
+	<production>
+		<left>S</left>
+		<right>C</right>
+	</production>
+
+    <production>
+		<left>C</left>
+		<right>set T v = E</right>
+	</production>
+    
+    <production>
+		<left>C</left>
+		<right>say E</right>
+	</production>
+    
+    <production>
+		<left>C</left>
+		<right>run v</right>
+	</production>
+    
+    <production>
+		<left>C</left>
+		<right>test L { S } fail { S }</right>
+	</production>
+
+    <production>
+		<left>C</left>
+		<right>whenever L { S }</right>
+	</production>
+
+    <production>
+		<left>C</left>
+		<right>repeat E { S }</right>
+	</production>
+
+    <production>
+		<left>T</left>
+		<right>number</right>
+	</production>
+    <production>
+		<left>T</left>
+		<right>text</right>
+	</production>
+    <production>
+		<left>T</left>
+		<right>fact</right>
+	</production>
+    <production>
+		<left>T</left>
+		<right>symbol</right>
+	</production>
+
+    <production>
+		<left>E</left>
+		<right>v</right>
+	</production>
+    <production>
+		<left>E</left>
+		<right>n</right>
+	</production>
+    <production>
+		<left>E</left>
+		<right>plus E E</right>
+	</production>
+    <production>
+		<left>E</left>
+		<right>subtract E E</right>
+	</production>
+    <production>
+		<left>E</left>
+		<right>multiply E E</right>
+	</production>
+    <production>
+		<left>E</left>
+		<right>divide E E</right>
+	</production>
+
+    <production>
+		<left>L</left>
+		<right>v</right>
+	</production>
+    <production>
+		<left>L</left>
+		<right>n</right>
+	</production>
+    <production>
+		<left>L</left>
+		<right>and L L</right>
+	</production>
+    <production>
+		<left>L</left>
+		<right>or L L</right>
+	</production>
+    <production>
+		<left>L</left>
+		<right>not L</right>
+	</production>
+
+</structure>
