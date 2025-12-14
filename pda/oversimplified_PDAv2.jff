@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<structure>
+	<type>pda</type>
+	<automaton>
+		<state id="0" name="q0">
+			<x>100.0</x>
+			<y>200.0</y>
+			<initial/>
+		</state>
+		<state id="1" name="q1">
+			<x>300.0</x>
+			<y>200.0</y>
+		</state>
+		<state id="2" name="q2">
+			<x>500.0</x>
+			<y>200.0</y>
+			<final/>
+		</state>
+
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read/>
+			<pop/>
+			<push>ZS</push>
+		</transition>
+
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>S</pop>
+			<push>CS</push>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>S</pop>
+			<push>C</push>
+		</transition>
+
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>C</pop>
+			<push>setTv=E</push>
+		</transition>
+
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>C</pop>
+			<push>sayE</push>
+		</transition>
+
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>C</pop>
+			<push>runv</push>
+		</transition>
+
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>C</pop>
+			<push>testL{S}fail{S}</push>
+		</transition>
+
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>C</pop>
+			<push>wheneverL{S}</push>
+		</transition>
+
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>C</pop>
+			<push>repeatE{S}</push>
+		</transition>
+
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>T</pop>
+			<push>number</push>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>T</pop>
+			<push>text</push>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>T</pop>
+			<push>fact</push>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>T</pop>
+			<push>symbol</push>
+		</transition>
+
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>E</pop>
+			<push>v</push>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>E</pop>
+			<push>n</push>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>E</pop>
+			<push>plusEE</push>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>E</pop>
+			<push>subtractEE</push>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>E</pop>
+			<push>multiplyEE</push>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>E</pop>
+			<push>divideEE</push>
+		</transition>
+
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>L</pop>
+			<push>v</push>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>L</pop>
+			<push>true</push>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>L</pop>
+			<push>false</push>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>L</pop>
+			<push>andLL</push>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>L</pop>
+			<push>orLL</push>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read/>
+			<pop>L</pop>
+			<push>notL</push>
+		</transition>
+
+		<transition><from>1</from><to>1</to><read>set</read><pop>set</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>say</read><pop>say</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>run</read><pop>run</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>test</read><pop>test</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>fail</read><pop>fail</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>whenever</read><pop>whenever</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>repeat</read><pop>repeat</pop><push/></transition>
+		
+		<transition><from>1</from><to>1</to><read>number</read><pop>number</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>text</read><pop>text</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>fact</read><pop>fact</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>symbol</read><pop>symbol</pop><push/></transition>
+
+		<transition><from>1</from><to>1</to><read>plus</read><pop>plus</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>subtract</read><pop>subtract</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>multiply</read><pop>multiply</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>divide</read><pop>divide</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>and</read><pop>and</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>or</read><pop>or</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>not</read><pop>not</pop><push/></transition>
+
+		<transition><from>1</from><to>1</to><read>v</read><pop>v</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>n</read><pop>n</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>true</read><pop>true</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>false</read><pop>false</pop><push/></transition>
+
+		<transition><from>1</from><to>1</to><read>=</read><pop>=</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>{</read><pop>{</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>}</read><pop>}</pop><push/></transition>
+
+		<transition>
+			<from>1</from>
+			<to>2</to>
+			<read/>
+			<pop>Z</pop>
+			<push/>
+		</transition>
+	</automaton>
+</structure>

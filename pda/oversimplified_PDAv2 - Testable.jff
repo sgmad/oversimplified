@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<structure>
+	<type>pda</type>
+	<automaton>
+		<state id="0" name="q0"><x>100.0</x><y>200.0</y><initial/></state>
+		<state id="1" name="q1"><x>300.0</x><y>200.0</y></state>
+		<state id="2" name="q2"><x>500.0</x><y>200.0</y><final/></state>
+
+		<transition><from>0</from><to>1</to><read/><pop/><push>SZ</push></transition>
+
+		<transition><from>1</from><to>1</to><read/><pop>S</pop><push>CS</push></transition>
+		<transition><from>1</from><to>1</to><read/><pop>S</pop><push>C</push></transition>
+
+		<transition><from>1</from><to>1</to><read/><pop>C</pop><push>sTv=E</push></transition>
+		<transition><from>1</from><to>1</to><read/><pop>C</pop><push>oE</push></transition>
+		<transition><from>1</from><to>1</to><read/><pop>C</pop><push>rv</push></transition>
+		<transition><from>1</from><to>1</to><read/><pop>C</pop><push>?L{S}:{S}</push></transition>
+		<transition><from>1</from><to>1</to><read/><pop>C</pop><push>wL{S}</push></transition>
+		<transition><from>1</from><to>1</to><read/><pop>C</pop><push>kE{S}</push></transition>
+
+		<transition><from>1</from><to>1</to><read/><pop>T</pop><push>#</push></transition> <transition><from>1</from><to>1</to><read/><pop>T</pop><push>"</push></transition> <transition><from>1</from><to>1</to><read/><pop>T</pop><push>f</push></transition> <transition><from>1</from><to>1</to><read/><pop>T</pop><push>y</push></transition> <transition><from>1</from><to>1</to><read/><pop>E</pop><push>v</push></transition>
+		<transition><from>1</from><to>1</to><read/><pop>E</pop><push>n</push></transition>
+		<transition><from>1</from><to>1</to><read/><pop>E</pop><push>+EE</push></transition>
+		<transition><from>1</from><to>1</to><read/><pop>E</pop><push>-EE</push></transition>
+		<transition><from>1</from><to>1</to><read/><pop>E</pop><push>*EE</push></transition>
+		<transition><from>1</from><to>1</to><read/><pop>E</pop><push>/EE</push></transition>
+
+		<transition><from>1</from><to>1</to><read/><pop>L</pop><push>v</push></transition>
+		<transition><from>1</from><to>1</to><read/><pop>L</pop><push>t</push></transition>
+		<transition><from>1</from><to>1</to><read/><pop>L</pop><push>x</push></transition>
+		<transition><from>1</from><to>1</to><read/><pop>L</pop><push>&amp;LL</push></transition>
+		<transition><from>1</from><to>1</to><read/><pop>L</pop><push>|LL</push></transition>
+		<transition><from>1</from><to>1</to><read/><pop>L</pop><push>!L</push></transition>
+
+		<transition><from>1</from><to>1</to><read>s</read><pop>s</pop><push/></transition> <transition><from>1</from><to>1</to><read>o</read><pop>o</pop><push/></transition> <transition><from>1</from><to>1</to><read>r</read><pop>r</pop><push/></transition> <transition><from>1</from><to>1</to><read>?</read><pop>?</pop><push/></transition> <transition><from>1</from><to>1</to><read>:</read><pop>:</pop><push/></transition> <transition><from>1</from><to>1</to><read>w</read><pop>w</pop><push/></transition> <transition><from>1</from><to>1</to><read>k</read><pop>k</pop><push/></transition> <transition><from>1</from><to>1</to><read>#</read><pop>#</pop><push/></transition> <transition><from>1</from><to>1</to><read>"</read><pop>"</pop><push/></transition> <transition><from>1</from><to>1</to><read>f</read><pop>f</pop><push/></transition> <transition><from>1</from><to>1</to><read>y</read><pop>y</pop><push/></transition> <transition><from>1</from><to>1</to><read>+</read><pop>+</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>-</read><pop>-</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>*</read><pop>*</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>/</read><pop>/</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>&amp;</read><pop>&amp;</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>|</read><pop>|</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>!</read><pop>!</pop><push/></transition>
+
+		<transition><from>1</from><to>1</to><read>v</read><pop>v</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>n</read><pop>n</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>t</read><pop>t</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>x</read><pop>x</pop><push/></transition>
+
+		<transition><from>1</from><to>1</to><read>=</read><pop>=</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>{</read><pop>{</pop><push/></transition>
+		<transition><from>1</from><to>1</to><read>}</read><pop>}</pop><push/></transition>
+
+		<transition><from>1</from><to>2</to><read/><pop>Z</pop><push/></transition>
+	</automaton>
+</structure>
